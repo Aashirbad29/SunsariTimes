@@ -33,8 +33,7 @@ export default function TrendingSection() {
     <>
         {showTrending && (
         <div className="trending-outer">
-        <div className="trending-section">
-            <div className="trending-inner">
+            <div className="trending-section">
             <div className="trending-title">Trending</div>
             <div className="trending-items">
                 {headlines.map((item, idx) => (
@@ -44,8 +43,6 @@ export default function TrendingSection() {
             </div>
             </div>
         </div>
-        </div>
-
         )}
 
       <div className="main-content">

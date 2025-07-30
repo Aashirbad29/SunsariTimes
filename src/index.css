@@ -57,86 +57,32 @@ a {
   margin-top: 0.2rem;
 }
 
-/* Layout container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 /* Navbar */
-/* OUTER WRAPPER: Full width background if needed */
-.navbar-outer {
-  background: #fff;
-  padding: 1rem 0;
-}
-
-/* INNER NAVBAR: constrained to same spacing as .category */
 .navbar {
-  padding: 0 2rem;
-  max-width: 1200px;
-  margin: 1 auto;
-}
-
-/* BORDER LINES: match section headers (aligned inside container) */
-.navbar-border-top,
-.navbar-border-bottom {
-  border-top: 1px solid black;
-  height: 2px;
-  margin: 3 auto;
-}
-
-/* NAV CONTENT (links) */
-.navbar-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  padding: 0.5rem 2rem;
+  gap: 1.5rem;
+  border-bottom: 2px solid black;
   font-size: 0.95rem;
-  font-weight: 500;
-  padding: 1rem 0;
 }
-
-.navbar-content a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
+.navbar a::after {
+  content: ' ▾';
 }
-
-.navbar-content a:hover {
-  color: #d72638; /* same red as section links */
-}
-
-.dropdown-icon {
-  font-size: 0.7rem;
-  margin-left: 0.25rem;
-}
-
-
 
 /* Trending Section */
-/* Outer wrapper like navbar-outer */
-.trending-outer {
-  background: #fff;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-
-/* Inner section with border and spacing */
 .trending-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  position: relative;
   display: flex;
   align-items: center;
-  background: white;
-  overflow: hidden;
+  padding: 0 rem 2rem;
+  background-color: white;
+  color: black;
+  margin-top: 1rem;
+  border-top: 0.5px solid black;
+  border-bottom: 0.5px solid black;
 }
-
-/* Leave all other existing .trending-title, .trending-items etc. styles untouched */
 
 .trending-title {
   position: relative;
@@ -185,12 +131,7 @@ a {
   padding: 0.6rem 1rem;
   white-space: nowrap;
 }
-.trending-inner {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0 ;
-}
+
 .trending-items {
   display: flex;
   align-items: center;
