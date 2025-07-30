@@ -5,9 +5,9 @@ export default function TrendingSection() {
   const [showTrending, setShowTrending] = useState(true);
 
   const headlines = [
-    "ed a historic climate change agreement",
-    "Tech giants are tackling a major cybersecurity breach",
-    "Financial markets experience..."
+    "Messi Wins the World Cup",
+    "Lionel Messi wins his 8th Ballon D'or",
+    "LoadShedding Again!!"
   ];
 
   const featuredArticle = {
