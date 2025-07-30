@@ -1,0 +1,590 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.actions input {
+  padding: 0.4rem;
+}
+.write-post {
+  background: black;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: monospace;
+}
+.date {
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* Layout container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+/* OUTER WRAPPER: Full width background if needed */
+.navbar-outer {
+  background: #fff;
+  padding: 1rem 0;
+}
+
+/* INNER NAVBAR: constrained to same spacing as .category */
+.navbar {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 1 auto;
+}
+
+/* BORDER LINES: match section headers (aligned inside container) */
+.navbar-border-top,
+.navbar-border-bottom {
+  border-top: 1px solid black;
+  height: 2px;
+  margin: 3 auto;
+}
+
+/* NAV CONTENT (links) */
+.navbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.navbar-content a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar-content a:hover {
+  color: #d72638; /* same red as section links */
+}
+
+.dropdown-icon {
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+}
+
+
+
+/* Trending Section */
+/* Outer wrapper like navbar-outer */
+.trending-outer {
+  background: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Inner section with border and spacing */
+.trending-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  background: white;
+  overflow: hidden;
+}
+
+/* Leave all other existing .trending-title, .trending-items etc. styles untouched */
+
+.trending-title {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  background: black;
+  color: white;
+  padding: 0.6rem 1rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.trending-items {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  animation: scroll-left 20s linear infinite;
+  padding-left: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.trending-section {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+}
+
+.trending-title {
+  background: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+}
+.trending-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 ;
+}
+.trending-items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.trending-items::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-item::after {
+  content: '•';
+  margin: 0 1rem;
+  color: #666;
+}
+
+.trending-item:last-of-type::after {
+  content: '';
+  margin: 0;
+}
+
+.trending-close {
+  margin-left: auto;
+  padding-left: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #555;
+  user-select: none;
+}
+
+.trending-item {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+/* Trending Bar styled like CategorySection */
+.trending-bar {
+  padding: 1rem 2rem;
+  background: #fff;
+}
+
+.trending-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.trending-headline {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.trending-headline .bullet {
+  margin: 0 0.75rem;
+  color: #888;
+}
+
+.trending-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+
+.trending-close:hover {
+  color: black;
+}
+
+
+/* Placeholder for images */
+.placeholder-image {
+  background: #e3e3e3 url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="14" x="3" y="5" rx="2" ry="2"/><path d="M3 19l4-4 3 3 5-6 4 4"/></svg>') center center no-repeat;
+  background-size: 50% auto;
+  border-radius: 4px;
+}
+
+/* Main content container */
+.main-content {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top Featured Article Section */
+.top-featured {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-article {
+  flex: 2;
+  min-width: 260px;
+}
+
+.featured-image {
+  width: 100%;
+  height: 400px; /* Bigger */
+  border-radius: 8px;
+  background-color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.featured-info h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.author-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Side featured articles */
+.side-featured {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  min-width: 200px;
+}
+
+.side-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-image {
+  width: 100%;
+  height: 180px; /* Half the main image */
+  border-radius: 6px;
+  background-color: #dcdcdc;
+  margin-bottom: 0.5rem;
+}
+
+.side-info p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.side-info .author-date {
+  font-size: 0.75rem;
+  color: #888;
+}
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .top-featured {
+    flex-direction: column;
+  }
+
+  .side-featured {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .side-article {
+    width: 48%;
+  }
+
+  .side-image {
+    height: 140px;
+  }
+}
+
+/* Categories buttons */
+.categories {
+  margin: 2rem 0 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.category-button {
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.category-button:hover,
+.category-button:focus {
+  background: #ddd;
+  outline: none;
+}
+.category-button.active {
+  border: 2px solid black;
+  background: white;
+}
+
+
+/* Articles Grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.card {
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 0.8rem;
+  box-shadow: 0 0 6px #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-image {
+  width: 100%;
+  height: 110px;
+  border-radius: 4px;
+}
+
+/* Redesigned Discussion Section */
+.discussion-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.3fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.discussion-large {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.discussion-large .placeholder-image {
+  height: 250px;
+  border-radius: 6px;
+}
+
+.discussion-medium {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.discussion-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #ddd;
+}
+.discussion-card .placeholder-image {
+  height: 160px;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.discussion-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.discussion-small {
+  background: #f9f9f9;
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  box-shadow: 0 0 4px #eee;
+}
+.discussion-small .placeholder-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.discussion-grid h4,
+.discussion-grid h5 {
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+.discussion-grid p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Category Section */
+.category {
+  padding: 2rem;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-header a {
+  color: #d72638;
+  font-size: 0.9rem;
+}
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Article Meta Above Title */
+.top-meta {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+/* Card Title */
+.card-title {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0.3rem 0;
+}
+
+/* Placeholder Image Style */
+.card-image {
+  width: 100%;
+  height: 140px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+.section-divider {
+  border-top: 1.5px solid #333;
+  margin: 1rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 0.2rem;
+}
+
+.section-header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-header a {
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.section-header .arrow {
+  font-weight: 600;
+}
+
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid #ccc;
+}
